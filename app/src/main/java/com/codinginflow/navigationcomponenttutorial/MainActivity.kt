@@ -30,12 +30,27 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+
+
+    // the termsFragment has a navigation global action (short arrow on nav_graph),
+    // the attributes of which determine the animations, any arguments,
+    // pop behavior etc, but
+    // the Settings Fragment has no action, so is referenced by id.
+    // See nav_graph.xml
+
+
+    // FYI in this video he warns against using global actions in menus but
+    // says that in order to place buttons on many fragments without having to edit
+    // each layout, it can be used.
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return if (item.itemId == R.id.termsAndConditions) {
+            // before typing in the following line, as per usual, rebuild project
+                // so that NavGraphDirections etc are automatically generated
             val action = NavGraphDirections.actionGlobalTermsFragment()
             navController.navigate(action)
             true
         } else {
+            // do normal navigation for settings fragment (no animations) rather than action
             item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
         }
     }

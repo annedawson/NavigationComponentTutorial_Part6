@@ -14,6 +14,11 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
+
+    <!-- See:
+    https://developer.android.com/guide/navigation/navigation-getting-started#add-navhost
+    https://developer.android.com/guide/navigation
+      -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"

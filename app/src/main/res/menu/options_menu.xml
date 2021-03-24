@@ -2,14 +2,30 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
+    <!-- See video #6 @~9m50s termsFragment id
+       doesn't need to match the one in the attributes settings.
+       We will be calling this fragment through the navigation component,
+       navcontroller.navigate() call
+       not by its ID. -->
     <item
         android:id="@+id/termsAndConditions"
         android:title="Terms &amp; Conditions"
         app:showAsAction="never" />
 
+
+    <!-- See video #6 @5m 47    s about menuCategory
+         It forces return to the last fragment destination
+         instead of the default home fragment-->
+
+    <!-- See video #6 @~9m settingsFragment id
+         should match the one in the attributes settings.
+         We will be calling this fragment by its ID,
+         not through the navigation component.-->
     <item
         android:id="@+id/settingsFragment"
         android:title="Settings"
+
         android:menuCategory="secondary"
         app:showAsAction="never" />
 
